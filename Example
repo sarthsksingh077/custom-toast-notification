@@ -1,0 +1,21 @@
+import React from 'react';
+import { ToastProvider, useToast } from 'customizable-toast';
+
+const App = () => {
+  const { addToast } = useToast();
+
+  const triggerToast = () => {
+    addToast('This is a success message!', 'success');
+  };
+
+  return (
+    <ToastProvider>
+      <div>
+        <h1>Customizable Toast Notifications</h1>
+        <button onClick={triggerToast}>Show Toast</button>
+      </div>
+    </ToastProvider>
+  );
+};
+
+export default App;
